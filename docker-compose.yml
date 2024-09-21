@@ -1,0 +1,11 @@
+services:
+  pulmap_air: # service name
+    container_name: pulmap-air
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:3000
+    working_dir: /pulmap-api
+    volumes:
+      - ./apps/pulmap-api:/pulmap-api
